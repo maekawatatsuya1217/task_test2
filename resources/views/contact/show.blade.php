@@ -1,0 +1,31 @@
+@extends('layouts.app')
+
+@section('content')
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">Dashboard</div>
+
+                <div class="card-body">
+                    @if (session('status'))
+                        <div class="alert alert-success" role="alert">
+                            {{ session('status') }}
+                        </div>
+                    @endif
+
+                    showです
+                    {{ $contact->your_name}}
+                    <form method="GET" action="">
+                        <!-- Laravelでフォームを作成する際は必ず@csrfの記述が必要 -->
+                        @csrf
+                        <!-- Laravelでフォームを作成する際は必ず@csrfの記述が必要 -->
+                        <input class="btn btn-info" type="submit" value="変更する">
+                    </form>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection

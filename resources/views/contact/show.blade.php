@@ -28,10 +28,24 @@
                         <!-- Laravelでフォームを作成する際は必ず@csrfの記述が必要 -->
                         <input class="btn btn-info" type="submit" value="変更する">
                     </form>
-                    
+
+                    <form method="POST" action="{{route('contact.destroy', ['id' => $contact->id])}}" id="delete_{{$contact->id}}">
+                        @csrf
+                        <a href="#" class="btn btn-danger" data-id="{{$contact->id}}" onclick="deletePost(this);">削除</a>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+    // 誤操作で削除されるのを防ぐ為、確認の警告文をJavaScriptで表示
+    function deletePost(e){
+        'use strict';
+        if (confirm('本当に削除していいですか？')){
+            document.getElementById('delete_' + e.dataset.id).submit();
+        }
+    }
+</script>
 @endsection

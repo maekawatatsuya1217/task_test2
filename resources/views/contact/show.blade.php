@@ -16,7 +16,13 @@
 
                     showです
                     {{ $contact->your_name}}
-                    <form method="GET" action="">
+                    {{ $contact->title}}
+                    {{ $contact->url}}
+                    {{ $contact->email}}
+                    {{ $gender}}
+                    {{ $age}}
+                    {{ $contact->contact}}
+                    <form method="GET" action="{{route('contact.edit', ['id' => $contact->id])}}">
                         <!-- Laravelでフォームを作成する際は必ず@csrfの記述が必要 -->
                         @csrf
                         <!-- Laravelでフォームを作成する際は必ず@csrfの記述が必要 -->

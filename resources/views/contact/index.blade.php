@@ -37,6 +37,8 @@
                         </tbody>
                     </table>
 
+                    {{ $contacts->links() }}
+
                     <!-- ボタン -->
                     <form method="GET" action="{{ route('contact.create') }}">
                         <button type="submit" class="btn btn-primary">

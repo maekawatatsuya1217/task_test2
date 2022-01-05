@@ -1,5 +1,85 @@
+/* ヘッダー */
+
 .p_header{
-    height: 200px;
+    height: 100%;
+}
+
+.p_header_inner{
+    color: #fff;
+    background-color: cadetblue;
+    padding: 30px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.p_header_logo a{
+    font-size: 25px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.p_header_logo :hover{
+    text-decoration: underline;
+}
+
+.p_nav{
+    display: flex;
+    text-decoration: none;
+}
+
+.p_nav li {
+    list-style: none;
+}
+
+.p_nav li a{
+    color: #fff;
+    margin: 0 50px;
+    text-decoration: none;
+}
+
+.p_nav li :hover{
+    color: black;
+}
+
+/* メイン */
+.p_main_inner{
+    height: 100%;
+    width: 100%;
+    color: lightgray;
+    background-color: rgb(232, 232, 232);
+    display: flex;
+    justify-content: center;
+}
+
+.field{
+    height: 40px;
+    width: 500px;
+    margin: 20px 0;
+}
+
+.t_field{
+    height: 170px;
+    width: 500px;
+    margin: 20px 0;
+}
+
+.s_field{
+    height: 40px;
     width: 100px;
-    background-color: blue;
+    margin: 22px 209px;
+}
+
+/* フッター */
+
+.p_footer{
+    height: 100%;
+}
+
+.p_footer_inner{
+    color: #fff;
+    background-color: cadetblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
